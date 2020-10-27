@@ -10,8 +10,9 @@ logging.basicConfig(filename='check-ssh-open.log', level=logging.INFO,
 def checkPortOpenClosed():
     a_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
-    ip_address = "192.168.0.1"
-    ssh_port_number = 80
+    # Add the ip here or take it from input
+    ip_address = ""
+    ssh_port_number = 22
 
     error_indicator = a_socket.connect_ex((ip_address, ssh_port_number))
     # connect_ex returns an error indicator
